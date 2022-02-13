@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
+// Set Up columns, fields, and data types for DataCom Tag Model
 class Tag extends Model {}
 
 Tag.init(

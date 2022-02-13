@@ -2,6 +2,7 @@
 
 const sequelize = require('../config/connection.js');
 
+// Set Up columns, fields, and data types for DataCom Category Model
 class Category extends Model {}
 
 Category.init(

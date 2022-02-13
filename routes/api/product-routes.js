@@ -1,9 +1,12 @@
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
 
-// The `/api/products` endpoint
+// ===============================
+// The `/api/products` endpoint |
+// ===============================
 
-// get all products
+
+//-------------->  find all products
 router.get("/", async (req, res) => {
   try {
     // find all products
@@ -16,10 +19,11 @@ router.get("/", async (req, res) => {
   }
 });
 
-// get one product
+
+//-------------->  get one product via id
+
 router.get("/:id", async (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+
   try {
     const productData = await Product.findByPk(req.params.id, {
       include: [{ model: Category }, { model: Tag }],
@@ -38,16 +42,10 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// create new product
+
+//-------------->   create new product
 router.post("/", (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
+
   Product.create({
     product_name: req.body.product_name,
     price: req.body.price,
@@ -76,9 +74,10 @@ router.post("/", (req, res) => {
     });
 });
 
-// update product
+
+// -------------->  update product via id
 router.put("/:id", (req, res) => {
-  // update product data
+
   Product.update(
     {
       product_name: req.body.product_name,
@@ -127,8 +126,10 @@ router.put("/:id", (req, res) => {
     });
 });
 
+
+// -------------->  delete one product by its `id` value
 router.delete("/:id", async (req, res) => {
-  // delete one product by its `id` value
+
   try {
     const productData = await Product.destroy({
       where: {
@@ -148,5 +149,7 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 module.exports = router;
