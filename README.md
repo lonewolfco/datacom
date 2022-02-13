@@ -1,5 +1,4 @@
 # DataCom
-Datacom is a back-end data warehouse for an e-commerce platform. Datacom utilizes Express.js API to use Sequelize to interact with a MySQL database.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgreen.svg)](https://opensource.org/licenses/MIT)
 
@@ -51,7 +50,10 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## UI & Video Walkthrough of Application
 <a name="video"></a>
-
+<a href="https://www.loom.com/share/26f6f6d1e8194a1bbf935835d85a09f3">
+    <p>DataCom - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/26f6f6d1e8194a1bbf935835d85a09f3-with-play.gif">
+  </a>
 
 
 ## Getting Started

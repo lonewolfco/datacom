@@ -26,7 +26,7 @@ Product.init(
       validate: {
         isDecimal:{
           arg: true,
-          msg: "ERROR: Stock must be a number"
+          msg: "ERROR: Price must be a number"
         },
       },
     },
